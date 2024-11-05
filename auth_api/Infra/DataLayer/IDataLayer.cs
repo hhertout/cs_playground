@@ -1,7 +1,10 @@
+using System.Data;
+using auth_api.Infra.ValueObj;
+
 namespace auth_api.Infra.DataLayer;
 
-public interface IDataLayer<T> : IDisposable
+public interface IDataLayer: IDisposable
 {
-    IEnumerable<T> GetAll();
-    void Persist(T data);
+    IEnumerable<IValueObj> GetAll();
+    void Persist(IValueObj data);
 }

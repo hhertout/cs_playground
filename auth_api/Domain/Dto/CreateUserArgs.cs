@@ -1,8 +1,8 @@
 using System.Text.Json.Serialization;
 
-namespace auth_api.Domain.ValueObject;
+namespace auth_api.Domain.Dto;
 
-public record CreateUserValueObj
+public record CreateUserArgs
 {
     [JsonPropertyName("email")]
     public string? Email { get; init; }
